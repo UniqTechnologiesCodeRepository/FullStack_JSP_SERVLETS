@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Home</title>
+	<!--	css based langauge -->
+	<style type="text/css">
+		.hello {
+			background-color: beige;
+		}
+	</style>
+
+	<!--	js based langauge -->
+
+	<script type="text/javascript">
+
+		function myFunction() {
+
+			var user = document.getElementById("uname").value; // Find the element 
+			var pd = document.getElementById("pwd").value;
+
+			console.log(user + " " + pd);
+			//alert(user + " " + pd);
+
+
+			if (user == "") {
+				alert("Please enter the username");
+				return false;
+			}
+			if (pd == "") {
+				alert("Please enter the password");
+				return false;
+			}
+
+		}
+
+	</script>
+</head>
+
+<body class="hello">
+	<h1 align="center">Login Form</h1>
+
+	<form action="MyFirstServlet" onsubmit="return myFunction()" method="get">
+		<table align="center">
+
+			<tr>
+				<td>Username</td>
+				<td><input type="text" id="uname" name="uname" /></td>
+			</tr>
+			<tr>
+				<td>Password</td>
+				<td><input type="password" id="pwd" name="pwd" /></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" /></td>
+				<td><a href="Newuser.html">Sign up</a></td>
+			</tr>
+
+		</table>
+	</form>
+</body>
+
+</html>

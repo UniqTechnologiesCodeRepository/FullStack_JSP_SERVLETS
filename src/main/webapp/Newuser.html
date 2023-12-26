@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Home</title>
+	<!--	css based langauge -->
+	<style type="text/css">
+		.hello {
+			background-color: beige;
+		}
+	</style>
+
+	<!--	js based langauge -->
+
+	<script type="text/javascript">
+
+		function myFunction() {
+
+			var user = document.getElementById("uname").value;
+			var pd = document.getElementById("pwd").value;
+
+			console.log(user + " " + pd);
+			//alert(user + " " + pd);
+
+
+			if (user == "") {
+				alert("Please enter the username");
+				return false;
+			}
+			if (pd == "") {
+				alert("Please enter the password");
+				return false;
+			}
+
+		}
+
+	</script>
+</head>
+
+<body class="hello">
+	<h1 align="center">Register Form</h1>
+
+	<form action="AddNewUser" onsubmit="return myFunction()" method="post">
+		<table align="center">
+
+			<tr>
+				<td>Username</td>
+				<td><input type="text" id="uname" name="u" /></td>
+			</tr>
+			<tr>
+				<td>Password</td>
+				<td><input type="password" id="pwd" name="p" /></td>
+			</tr>
+			<tr>
+				<td>Confirm Password</td>
+				<td><input type="password" id="cpwd" name="cp" /></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" value="signup" /></td>
+
+			</tr>
+
+		</table>
+	</form>
+</body>
+
+</html>
